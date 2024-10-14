@@ -319,24 +319,24 @@
           </button>
         </div>
       </article>
-    </main>
-    <footer class="footer">
-      <button class="button button-save" type="button" onclick="window['save-mode'].showModal();" aria-controls="save-mode" aria-label="Кнопка открытия модального окна 'Сохранить на память' для сохранение статей на дискету">
-        <svg class="icon-floppy" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button__text" aria-hidden="true">Сохранить на память</span>
-      </button>
-      <dialog id="save-mode" class="dialog-mode" aria-label="Модальное окно сохранить на память">
-        <div class="floppy">
-          <svg overflow="visible" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <div class="footer">
+        <button class="button button-save" type="button" onclick="window['save-mode'].showModal();" aria-controls="save-mode" aria-label="Кнопка открытия модального окна 'Сохранить на память' для сохранение статей на дискету">
+          <svg class="icon-floppy" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <h2 class="floppy__title">Вставьте дискету, чтобы продолжить</h2>
-        </div>
-        <button class="button button__text button__text--save-mode" type="button" onclick="window['save-mode'].close();" aria-label="Кнопка закрытие модального окна 'Сохранить на память'"><span class="button__text-ok" aria-hidden="true">ок</span></button>
-      </dialog>
-    </footer>
+          <span class="button__text" aria-hidden="true">Сохранить на память</span>
+        </button>
+        <dialog id="save-mode" class="dialog-mode" aria-label="Модальное окно сохранить на память">
+          <div class="floppy">
+            <svg overflow="visible" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <use href="./svg/floppy.svg#floppy"></use>
+            </svg>
+            <h2 class="floppy__title">Вставьте дискету, чтобы продолжить</h2>
+          </div>
+          <button class="button button__text button__text--save-mode" type="button" onclick="window['save-mode'].close();" aria-label="Кнопка закрытие модального окна 'Сохранить на память'"><span class="button__text-ok" aria-hidden="true">ок</span></button>
+        </dialog>
+      </div>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
