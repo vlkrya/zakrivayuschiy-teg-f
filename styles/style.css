@@ -145,7 +145,7 @@
     top: 0;
     left: -15px;
     color: inherit;
-    animation: left-right 2s ease-in-out infinite;
+    animation: left-right 2s ease-in-out infinite;  
   }
 }
 
