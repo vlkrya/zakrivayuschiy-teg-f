@@ -389,6 +389,10 @@
 
 }
 
+.button__text-ok {
+  text-transform: uppercase;
+}
+
 .button__text-padding {
   padding-inline: 29px;
   padding-block: 9px;
