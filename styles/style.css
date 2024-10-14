@@ -182,6 +182,11 @@
   block-size: clamp(23.25rem, 16.113rem + 30.4511vw, 43.5rem);
 }
 
+.img-filter {
+  width: 100%;
+  height: auto;
+}
+
 .img-filter-sapia {
   filter: sepia(80%);
 }
