@@ -14,11 +14,6 @@
     --fill-global: #ff0000;
     --fill-border: #00cc14;
   
-    /* cursour */
-  
-    --cursour: url('../images/cursor/default_darck.png');
-    --cursour-pointer: url('../images/cursor/pointer_darck.png');
-  
     /* color fonts */
   
     --global-color: #00cc14;
@@ -55,11 +50,6 @@
     --fill-global: #ff0000;
     --fill-border: #000;
   
-    /* cursour */
-  
-    --cursour: url('../images/cursor/default.png');
-    --cursour-pointer: url('../images/cursor/pointer.png');
-  
     /* color fonts */
   
     --global-color: #000;
@@ -95,11 +85,6 @@
     --fill-active: #000;
     --fill-global: #ff0000;
     --fill-border: #000;
-  
-      /* cursour */
-  
-    --cursour: url('../images/cursor/default.png');
-    --cursour-pointer: url('../images/cursor/pointer.png');
   
       /* color fonts */
   

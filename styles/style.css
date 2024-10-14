@@ -89,7 +89,6 @@
   gap: 12px;
 }
 
-
 .button {
   position: relative;
   appearance: none;
@@ -98,7 +97,6 @@
   border: none;
   background: none;
   outline: none;
-  overflow: hidden;
 
   &:focus {
     outline: none;
@@ -145,7 +143,7 @@
     top: 0;
     left: -15px;
     color: inherit;
-    animation: left-right 2s ease-in-out infinite;  
+    animation: left-right 2s ease-in-out infinite;
   }
 }
 
@@ -287,7 +285,7 @@
 .like-icon {
   & .contour {
     fill: var(--fill-border, #00cc14);
-    transition: fill 0.3s;
+    transition: fill 0.1s;
   }
 
   & .main-body {
@@ -297,12 +295,11 @@
 
   & .core {
     fill: transparent;
-    transition: fill 0.3s;
+    transition: fill 0.3s 0.03s;
   }
 
   & .sparks {
     fill: transparent;
-    transition: fill 0.3s;
   }
 }
 
@@ -343,24 +340,23 @@
 
   & .main-body {
     fill: var(--fill-global, #ff0000);
+    transition: fill 0.3s 0.05s;
   }
 
   & .contour {
-    fill: var(--fill-global, #ff0000);
-  }
-
-  & .sparks {
+    transition: fill 0.3s 0.06s;
     fill: var(--fill-global, #ff0000);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .like-icon.is-liked {
-    animation: like-click 0.3s ease-in;
+    transition: fill 3s;
+    animation: like-click 0.3s 0.1s ease-in;
     transform-origin: 50% 50%;
 
     & .sparks {
-      animation: like-click-sparks 0.3s 0.1s ease-in;
+      animation: like-click-sparks 0.3s 0.3s ease-in;
     }
   }
 }
@@ -392,27 +388,31 @@
   padding-block: 9px;
 }
 
-.button__text::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--bg-accent, #00cc14);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-  mix-blend-mode: difference;
-}
 
 @media (hover: hover) {
+  .button .button__text::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg-accent, #00cc14);
+    mix-blend-mode: difference;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+  }
+
   .button:hover .button__text::before {
-    transform: translateX(0);
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .button .button__text::before {
-    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
   }
 }
+
 
 .footer {
   display: flex;
@@ -510,6 +510,11 @@
   }
 
 }
+
+
+
+
+
 
 
 
