@@ -39,6 +39,7 @@
     linear-gradient(var(--gradient-color-1, #007f0c) 0.01%, var(--gradient-color-2, #007f0c) 100%);
   background-size: cover;
   background-attachment: fixed;
+  transition: background 0.5s ease, font-weight 0.3s ease; 
 }
 
 .theme-dark .page {
@@ -69,6 +70,7 @@
   color: var(--global-color, #00cc14);
   border: 2px solid var(--global-bd-color, #00cc14);
   background-color: var(--bg-header, #000);
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .header__decor {
@@ -77,6 +79,7 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
+  transition: font-size 0.3s ease, line-height 0.3s ease;
 }
 
 .header__title {
@@ -85,6 +88,7 @@
   font-weight: 400;
   line-height: var(--m-line-height, 23px);
   text-transform: uppercase;
+  transition: font-size 0.3s ease, line-height 0.3s ease;
 }
 
 .theme-menu {
@@ -105,6 +109,7 @@
   border: none;
   background: none;
   outline: none;
+  transition: font-size 0.3s ease, line-height 0.3s ease;
 
   &:focus {
     outline: none;
@@ -124,6 +129,7 @@
 .theme-menu__button {
   margin-inline-start: 20px;
   text-transform: uppercase;
+  transition: margin-inline-start 0.3s ease;
 
   &:focus-visible {
     box-shadow: none;
@@ -271,6 +277,7 @@
 
 .card__icon-button {
   display: flex;
+  transition: box-shadow 0.3s ease, outline 0.3s ease;
 
   &:focus-visible {
     box-shadow: none;
@@ -296,9 +303,12 @@
 }
 
 .like-icon {
+  transition: fill 0.3s ease;
+
   & .contour {
     fill: var(--fill-border, #00cc14);
     transition: fill 0.1s linear;
+    
   }
 
   & .main-body {
@@ -360,6 +370,9 @@
     transition: fill 0.3s linear 0.06s;
     fill: var(--fill-global, #ff0000);
   }
+
+  transition: transform 0.3s ease;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -378,6 +391,7 @@
 .card__like-button {
   background-color: var(--bg-secondry, #000);
   border: 2px solid var(--global-bd-color, #00cc14);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .button__text {
@@ -386,6 +400,7 @@
   font-weight: 400;
   line-height: var(--s-lie-height, 14px);
   color: var(--global-color, #00cc14);
+  transition: color 0.3s ease, line-height 0.3s ease; 
 
 }
 
@@ -397,12 +412,14 @@
   padding-inline: 29px;
   padding-block: 9px;
   transition: padding 0s 0.5s;
+  
 }
 
 .box-like:has(.like-icon.is-liked) .button__text-padding {
   transition: padding 0s 0.5s;
   padding-inline: 15px;
   padding-block: 9px;
+  transition: padding 0.3s ease;
 }
 
 
@@ -435,6 +452,7 @@
   display: flex;
   justify-content: center;
   padding-block: 50px 103px;
+  transition: padding 0.3s ease;
 }
 
 .button-save { 
