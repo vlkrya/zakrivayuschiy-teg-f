@@ -21,7 +21,10 @@ h6,
 p,
 ul,
 ol,
-li {
+li,
+span,
+figure,
+figcaption {
   margin: 0;
   padding: 0;
 }
@@ -35,6 +38,14 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+}
+
+img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 ul,

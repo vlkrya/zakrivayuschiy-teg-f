@@ -1,1 +1,57 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* like color */
+
+  --fill-active: #00cc14;
+  --fill-global: #ff0000;
+  --fill-border: #00cc14;
+
+  /* cursour */
+
+  --cursour: url('../images/cursor/default_darck.png');
+  --cursour-pointer: url('../images/cursor/pointer_darck.png');
+
+  /* color fonts */
+
+  --global-color: #00cc14;
+
+  /* color border */
+
+  --global-bd-color: #00cc14;
+
+  /* color background */
+
+  --bg-secondry: #000;
+  --bg-accent: #00cc14;
+  --bg-header: #000;
+  --line-global-color: #000;
+  --gradient-color-1: #007f0c;
+  --gradient-color-2: #004306;
+
+  /* color shadow */
+
+  --tx-shadow: #000;
+
+  /* font size */
+
+  --s-font-size: 14px;
+  --m-font-size: 18px;
+
+  /* font family */
+
+  --feature-font-family: 'Inter-Variable'; 
+  --global-font-family: 'PressStart2P';
+
+  /* font-feature-settings */
+
+  --s-font-feature-settings: 'wght' 465;
+  --l-font-feature-settings: 'wght' 785;
+
+  /* line-height */
+
+  --s-line-height: 14px;
+  --ssm-line-height: 21px;
+  --sm-line-height: 22px;
+  --m-line-height: 23px;
+}

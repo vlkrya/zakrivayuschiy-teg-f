@@ -12,3 +12,61 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+@keyframes scaleX {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: translateX(4px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes like-click {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes like-click-sparks {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    fill: red;
+  }
+  100% {
+    fill: transparent;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  100% {
+    transition: opacity 0.3s;
+    opacity: 1;
+  }
+}
+
