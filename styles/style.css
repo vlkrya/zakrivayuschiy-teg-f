@@ -21,7 +21,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: 'Inter-Variable', sans-serif;
-  font-weight: 400;
+  font-weight: 400; 
   font-feature-settings: 'wght' 465;
   background-image: repeating-linear-gradient(
       var(--line-global-color, #000),
@@ -39,6 +39,14 @@
     linear-gradient(var(--gradient-color-1, #007f0c) 0.01%, var(--gradient-color-2, #007f0c) 100%);
   background-size: cover;
   background-attachment: fixed;
+}
+
+.theme-dark .page {
+  font-weight: 465;
+}
+
+.theme-dark .card__text {
+  font-weight: 465;
 }
 
 @supports (font-variation-settings: normal) {
@@ -173,7 +181,7 @@
 @supports (font-variation-settings: normal) {
   .card__title {
     font-family: var(--feature-font-family), sans-serif;
-    font-variation-settings: var(--l-font-feature-settings, 765);
+    font-variation-settings: var(--l-font-feature-settings, 785);
   }
 }
 
@@ -249,7 +257,7 @@
   padding: 25px 24px 12.5px;
   color: var(--global-color, #00cc14);
   font-size: var(--m-font-size, 18px);
-  font-weight: 500;
+  font-weight: 400;
   line-height: var(--ssm-line-height, 21px);
   border-block-start: 2px solid var(--global-bd-color, #00cc14);
 }
@@ -290,17 +298,17 @@
 .like-icon {
   & .contour {
     fill: var(--fill-border, #00cc14);
-    transition: fill 0.1s;
+    transition: fill 0.1s linear;
   }
 
   & .main-body {
     fill: transparent;
-    transition: fill 0.3s;
+    transition: fill 0.3s linear;
   }
 
   & .core {
     fill: transparent;
-    transition: fill 0.3s 0.03s;
+    transition: fill 0.3s linear 0.03s;
   }
 
   & .sparks {
@@ -314,12 +322,12 @@
 
     & .main-body {
       fill: var(--fill-global, #ff0000);
-      transition: fill 0.3s 0.05s;
+      transition: fill 0.3s linear 0.05s;
     }
 
     & .core {
       fill: var(--fill-global, #ff0000);
-      transition: fill 0.3s;
+      transition: fill 0.3s linear;
     }
   }
 }
@@ -345,11 +353,11 @@
 
   & .main-body {
     fill: var(--fill-global, #ff0000);
-    transition: fill 0.3s 0.05s;
+    transition: fill 0.3s linear 0.05s;
   }
 
   & .contour {
-    transition: fill 0.3s 0.06s;
+    transition: fill 0.3s linear 0.06s;
     fill: var(--fill-global, #ff0000);
   }
 }
@@ -440,6 +448,7 @@
 .icon-floppy {
   max-width: 21px;
   height: auto;
+  
 
 }
 
@@ -451,7 +460,7 @@
 }
 
 .dialog-mode::backdrop {
-  background-color: rgba(0 0 0 /0.5);
+  background-color: rgba(0 0 0 /0.75);
 }
 
 .floppy {
@@ -459,6 +468,7 @@
   align-items: center;
   flex-wrap: nowrap;
   gap: 20px;
+
 
 }
 
@@ -479,7 +489,7 @@
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   
   .header__title {
     margin-block-end: 17px;
@@ -490,7 +500,7 @@
   }
 
   .card__title {
-    padding-block: 5px36px;
+    padding-block: 5px 36px;
   }
 
   .card__text {
@@ -512,6 +522,7 @@
   .icon-floppy {
     max-width: 28px;
     height: auto;
+  
   }
 
 }

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/themes.css" >
     <link rel="stylesheet" href="./styles/themes.css" >
     <link rel="icon" href="./svg/favicon.svg" >
-    <link rel="floppy" href="/Users/macbook/Development/Yandex/zakrivayuschiy-teg-f/svg/floppy.svg">
+    <link rel="floppy" href="./svg/floppy.svg">
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" >
     <script src="./scripts/set-theme.js"></script>
   </head>
@@ -321,24 +321,20 @@
       </article>
     </main>
     <footer class="footer">
-      <button class="button button-save" type="button" onclick="window['save-mode'].showModal();" aria-controls="save-mode" aria-label="открытие модального окна">
+      <button class="button button-save" type="button" onclick="window['save-mode'].showModal();" aria-controls="save-mode" aria-label="Кнопка открытия модального окна 'Сохранить на память' для сохранение статей на дискету">
         <svg class="icon-floppy" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <use href="/Users/macbook/Development/Yandex/zakrivayuschiy-teg-f/svg/floppy.svg"></use>
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text" aria-hidden="true">Сохранить на память</span>
       </button>
-      <dialog id="save-mode" class="dialog-mode" aria-label="сохранить">
+      <dialog id="save-mode" class="dialog-mode" aria-label="Модальное окно сохранить на память">
         <div class="floppy">
-          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <use href="/Users/macbook/Development/Yandex/zakrivayuschiy-teg-f/svg/floppy.svg"></use>
+          <svg overflow="visible" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <use href="./svg/floppy.svg#floppy"></use>
           </svg>
           <h2 class="floppy__title">Вставьте дискету, чтобы продолжить</h2>
         </div>
-        <button class="button button__text button__text--save-mode" type="button" onclick="window['save-mode'].close();" aria-label="закрытие модального окна">
-          <span class="button__text" aria-hidden="true">
-            ОК
-          </span>
-        </button>
+        <button class="button button__text button__text--save-mode" type="button" onclick="window['save-mode'].close();" aria-label="Кнопка закрытие модального окна 'Сохранить на память'"><span class="button__text" aria-hidden="true">ОК</span></button>
       </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
