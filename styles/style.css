@@ -415,7 +415,6 @@
   font-weight: 400;
   line-height: var(--s-lie-height, 14px);
   color: var(--global-color, #00cc14);
-  transition: color 0.3s ease, line-height 0.3s ease; 
 
 }
 
@@ -426,16 +425,9 @@
 .button__text-padding {
   padding-inline: 29px;
   padding-block: 9px;
-  transition: padding 0s 0.5s;
   
 }
 
-.box-like:has(.like-icon.is-liked) .button__text-padding {
-  transition: padding 0s 0.5s;
-  padding-inline: 15px;
-  padding-block: 9px;
-  transition: padding 0.3s ease;
-}
 
 
 @media (hover: hover) {
