@@ -41,8 +41,8 @@
   
     /* font-feature-settings */
   
-    --s-font-feature-settings: 'wght' 465;
-    --l-font-feature-settings: 'wght' 785;
+    --s-font-feature-settings:  465;
+    --l-font-feature-settings:  785;
   
   }
   
@@ -84,8 +84,8 @@
   
     /* font-feature-settings */
     
-    --s-font-feature-settings: 'wght' 400;
-    --l-font-feature-settings: 'wght' 700;
+    --s-font-feature-settings:  400;
+    --l-font-feature-settings:  700;
   }
   
   @media (prefers-color-scheme: light) {
@@ -124,8 +124,8 @@
     
       /* font-feature-settings */
   
-     --s-font-feature-settings: 'wght' 400;
-     --l-font-feature-settings: 'wght' 700;
+     --s-font-feature-settings:  400;
+     --l-font-feature-settings:  700;
     }
   
   }

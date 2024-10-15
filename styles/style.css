@@ -22,7 +22,7 @@
   min-block-size: 100dvb;
   font-family: 'Inter-Variable', sans-serif;
   font-weight: 400; 
-  font-variation-settings: "wght" var(--main-weight);
+  font-variation-settings: var(--main-weight);
   background-image: repeating-linear-gradient(
       var(--line-global-color, #000),
       var(--line-global-color, #000) 2px,
@@ -187,7 +187,7 @@
   padding-inline: 8px;
   color: var(--global-color, #00cc14);
   font-size: 18px;
-  font-variation-settings: "wght" var(--aсcent-weight);
+  font-variation-settings: var(--aсcent-weight);
   line-height: var(--sm-line-height, 22px);
   border-block-end: 2px solid var(--global-bd-color, #00cc14);
 }
@@ -271,10 +271,10 @@
   padding: 25px 24px 12.5px;
   color: var(--global-color, #00cc14);
   font-size: var(--m-font-size, 18px);
-  font-variation-settings: "wght" var(--main-weight);
+  font-variation-settings: var(--main-weight);
   line-height: var(--ssm-line-height, 21px);
   border-block-start: 2px solid var(--global-bd-color, #00cc14);
-  font-variation-settings: "wght" var(--text-weight);
+  font-variation-settings: var(--text-weight);
 }
 
 @supports (font-variation-settings: normal) {
