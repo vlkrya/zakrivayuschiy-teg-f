@@ -7,6 +7,10 @@
 
 
 :root.theme-dark {
+
+  --accent-color: #00cc14;
+
+  --main-weight: 465;
   
     /* like icon color */
   
@@ -43,6 +47,13 @@
   }
   
   :root.theme-light {
+
+
+    
+
+    --accent-color: #000000;
+
+    --main-weight: 400;
   
     /* like icon color */
   
@@ -79,6 +90,10 @@
   
   @media (prefers-color-scheme: light) {
     :root {
+
+      --accent-color: #000000;
+
+      --main-weight: 400; 
   
     /* like icon color */
   

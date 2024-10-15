@@ -22,7 +22,7 @@
   min-block-size: 100dvb;
   font-family: 'Inter-Variable', sans-serif;
   font-weight: 400; 
-  font-feature-settings: 'wght' 465;
+  font-variation-settings: "wght" var(--main-weight);
   background-image: repeating-linear-gradient(
       var(--line-global-color, #000),
       var(--line-global-color, #000) 2px,
@@ -39,16 +39,8 @@
     linear-gradient(var(--gradient-color-1, #007f0c) 0.01%, var(--gradient-color-2, #007f0c) 100%);
   background-size: cover;
   background-attachment: fixed;
-  transition: background 0.5s ease, font-weight 0.3s ease; 
 }
 
-.theme-dark .page {
-  font-weight: 465;
-}
-
-.theme-dark .card__text {
-  font-weight: 465;
-}
 
 @supports (font-variation-settings: normal) {
   .page {
@@ -79,7 +71,7 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
-  transition: font-size 0.3s ease, line-height 0.3s ease;
+
 }
 
 .header__title {
@@ -88,7 +80,6 @@
   font-weight: 400;
   line-height: var(--m-line-height, 23px);
   text-transform: uppercase;
-  transition: font-size 0.3s ease, line-height 0.3s ease;
 }
 
 .theme-menu {
@@ -132,7 +123,8 @@
   transition: margin-inline-start 0.3s ease;
 
   &:focus-visible {
-    box-shadow: none;
+    outline: none;
+    opacity: 0.6;
   }
 
   &:focus-visible::after {
@@ -142,8 +134,24 @@
     bottom: -3px;
     left: 4px;
     border-block-end: 1px solid var(--global-bd-color, #00cc14);
-    animation: scaleX 2s ease-in;
+    animation: scaleX 5s ease-in;
     transform-origin: 0 0;
+  }
+}
+
+@media (hover: hover) {
+  .theme-menu__button {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 1px;
+      background-color: var(--global-bd-color, #00cc14);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
   }
 }
 
@@ -157,7 +165,7 @@
     top: 0;
     left: -15px;
     color: inherit;
-    animation: left-right 2s ease-in-out infinite;
+    animation: left-right 3s ease-in-out infinite alternate;
   }
 }
 
@@ -179,7 +187,7 @@
   padding-inline: 8px;
   color: var(--global-color, #00cc14);
   font-size: 18px;
-  font-weight: 400;
+  font-variation-settings: "wght" var(--aсcent-weight);
   line-height: var(--sm-line-height, 22px);
   border-block-end: 2px solid var(--global-bd-color, #00cc14);
 }
@@ -263,9 +271,10 @@
   padding: 25px 24px 12.5px;
   color: var(--global-color, #00cc14);
   font-size: var(--m-font-size, 18px);
-  font-weight: 400;
+  font-variation-settings: "wght" var(--main-weight);
   line-height: var(--ssm-line-height, 21px);
   border-block-start: 2px solid var(--global-bd-color, #00cc14);
+  font-variation-settings: "wght" var(--text-weight);
 }
 
 @supports (font-variation-settings: normal) {
@@ -277,19 +286,8 @@
 
 .card__icon-button {
   display: flex;
-  transition: box-shadow 0.3s ease, outline 0.3s ease;
+  transition: box-shadow 0.3s ease, outline 0.3s ease, transform 0.3s ease; 
 
-  &:focus-visible {
-    box-shadow: none;
-  }
-
-  &:focus-visible:before {
-    content: '';
-    position: absolute;
-    inset: 1px 6px;
-    transition: outline 0.3s ease;
-    outline: 2px solid var(--global-bd-color, #00cc14);
-  }
 }
 
 .box-like {
@@ -308,7 +306,6 @@
   & .contour {
     fill: var(--fill-border, #00cc14);
     transition: fill 0.1s linear;
-    
   }
 
   & .main-body {
@@ -327,16 +324,28 @@
 }
 
 @media (hover: hover) {
+  .like-icon:hover .core,
+  .like-icon:hover .main-body {
+    fill: var(--fill-border, #00cc14); 
+    transition: fill 0.3s linear;
+  }
+
+  .card__icon-button:hover {
+    transform: scale(1.05); 
+  }
+}
+
+@media (hover: hover) {
   .heart:hover {
     cursor: var(--cursour-pointer), pointer;
 
     & .main-body {
-      fill: var(--fill-global, #ff0000);
+      fill: var(--fill-border, #00cc14);
       transition: fill 0.3s linear 0.05s;
     }
 
     & .core {
-      fill: var(--fill-global, #ff0000);
+      fill: var(--fill-border, #00cc14);
       transition: fill 0.3s linear;
     }
   }
@@ -345,20 +354,24 @@
 .heart:active {
   & .main-body {
     fill: var(--fill-active, #00cc14);
+    transition-delay: 0.05s;
   }
 
   & .core {
     fill: var(--fill-active, #00cc14);
+    transition-delay: 0s;
   }
 
   & .contour {
     fill: var(--fill-border, #000);
+    transition: 0.05s;
   }
 }
 
 .like-icon.is-liked {
   & .core {
     fill: var(--fill-global, #ff0000);
+    transition-delay: 0s;
   }
 
   & .main-body {
@@ -377,12 +390,11 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .like-icon.is-liked {
-    transition: fill 3s;
-    animation: like-click 0.3s 0.1s ease-in;
+    animation: like-click 0.3s 0.1s ease-in alternate;
     transform-origin: 50% 50%;
 
     & .sparks {
-      animation: like-click-sparks 0.3s 0.3s ease-in;
+      animation: like-click-sparks 0.3s 0.3s ease-in alternate;
     }
   }
 }
@@ -392,7 +404,10 @@
   background-color: var(--bg-secondry, #000);
   border: 2px solid var(--global-bd-color, #00cc14);
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
 }
+
+
 
 .button__text {
   display: inline-block;
