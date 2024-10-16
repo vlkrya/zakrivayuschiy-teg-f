@@ -422,6 +422,7 @@
   inline-size: 100%;
   min-block-size: 38px;
   text-transform: uppercase;
+  padding-top: 9px;
 }
 
 .button__text-padding {
@@ -589,6 +590,7 @@
   align-items: center;
   flex-wrap: nowrap;
   gap: 20px;
+  padding-bottom: 18px;
 
 
 }
