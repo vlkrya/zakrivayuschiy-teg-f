@@ -7,7 +7,7 @@
 
 
 :root.theme-dark {
-
+  --like-color: #00cc14;
   --accent-color: #00cc14;
 
   --main-weight: 465;
@@ -48,7 +48,7 @@
   
   :root.theme-light {
 
-
+    --like-color: white;
     
 
     --accent-color: #000000;
@@ -90,7 +90,8 @@
   
   @media (prefers-color-scheme: light) {
     :root {
-
+      
+      --like-color: white;
       --accent-color: #000000;
 
       --main-weight: 400; 
