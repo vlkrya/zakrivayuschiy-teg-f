@@ -1,132 +1,149 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+/* В этом файле описаны значения переменных в разных цветовых схемах.
+   Классы для тем:
+   ✦ theme-dark — класс тёмной темы
+   ✦ theme-light — класс светлой темы
+   Также описаны стили для изменения темы через медиазапрос пользовательских предпочтений
 */
 
 
+:root,
+:root.theme-light {
+  --floppy-color: #000000;
+  --like-color: white;
+  --accent-color: #000000;
+  --main-weight: 400;
+
+  /* like icon color */
+  --fill-active: #000;
+  --fill-global: #ff0000;
+  --fill-border: #000;
+
+  /* color fonts */
+  --global-color: #000;
+
+  /* color border */
+  --global-bd-color: #000;
+
+  /* color background */
+  --bg-secondry: #fff;
+  --bg-accent: #f0f8ff;
+  --bg-header: #fff;
+  --line-global-color: #d3d3d3;
+  --gradient-color-1: #e7e7e7;
+  --gradient-color-2: #1a1a1a;
+
+  /* color shadow */
+  --tx-shadow: #fff;
+
+  /* font-feature-settings */
+  --s-font-feature-settings: 400;
+  --l-font-feature-settings: 700;
+}
+
+
 :root.theme-dark {
+  --floppy-color: white;
   --like-color: #00cc14;
   --accent-color: #00cc14;
-
   --main-weight: 465;
-  
+
+  /* like icon color */
+  --fill-active: #00cc14;
+  --fill-global: #ff0000;
+  --fill-border: #00cc14;
+
+  /* color fonts */
+  --global-color: #00cc14;
+
+  /* color border */
+  --global-bd-color: #00cc14;
+
+  /* color background */
+  --bg-secondry: #000;
+  --bg-accent: #00cc14;
+  --bg-header: #000;
+  --line-global-color: #000000;
+  --gradient-color-1: #007f0c;
+  --gradient-color-2: #004306;
+
+  /* color shadow */
+  --tx-shadow: #000;
+
+  /* font-feature-settings */
+  --s-font-feature-settings: 465;
+  --l-font-feature-settings: 785;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --floppy-color: white;
+    --like-color: #00cc14;
+    --accent-color: #00cc14;
+    --main-weight: 465;
+
     /* like icon color */
-  
     --fill-active: #00cc14;
     --fill-global: #ff0000;
     --fill-border: #00cc14;
-  
+
     /* color fonts */
-  
     --global-color: #00cc14;
-  
+
     /* color border */
-  
     --global-bd-color: #00cc14;
-  
+
     /* color background */
-  
     --bg-secondry: #000;
     --bg-accent: #00cc14;
     --bg-header: #000;
     --line-global-color: #000000;
     --gradient-color-1: #007f0c;
     --gradient-color-2: #004306;
-  
+
     /* color shadow */
-  
     --tx-shadow: #000;
-  
+
     /* font-feature-settings */
-  
-    --s-font-feature-settings:  465;
-    --l-font-feature-settings:  785;
-  
+    --s-font-feature-settings: 465;
+    --l-font-feature-settings: 785;
   }
-  
-  :root.theme-light {
+}
 
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --floppy-color: #000000;
     --like-color: white;
-    
-
     --accent-color: #000000;
-
     --main-weight: 400;
-  
+
     /* like icon color */
-  
     --fill-active: #000;
     --fill-global: #ff0000;
     --fill-border: #000;
-  
+
     /* color fonts */
-  
     --global-color: #000;
-  
+
     /* color border */
-  
     --global-bd-color: #000;
-  
+
     /* color background */
-  
     --bg-secondry: #fff;
     --bg-accent: #f0f8ff;
     --bg-header: #fff;
     --line-global-color: #d3d3d3;
     --gradient-color-1: #e7e7e7;
     --gradient-color-2: #1a1a1a;
-  
-    /* color shadow */
-  
-    --tx-shadow: #fff;
-  
-    /* font-feature-settings */
-    
-    --s-font-feature-settings:  400;
-    --l-font-feature-settings:  700;
-  }
-  
-  @media (prefers-color-scheme: light) {
-    :root {
-      
-      --like-color: white;
-      --accent-color: #000000;
 
-      --main-weight: 400; 
-  
-    /* like icon color */
-  
-    --fill-active: #000;
-    --fill-global: #ff0000;
-    --fill-border: #000;
-  
-      /* color fonts */
-  
-      --global-color: #000;
-  
-      /* color border */
-  
-      --global-bd-color: #000;
-  
-      /* color background */
-  
-      --bg-secondry: #fff;
-      --bg-accent: #f0f8ff;
-      --bg-header: #fff;
-      --line-global-color: #d3d3d3;
-      --gradient-color-1: #e7e7e7;
-      --gradient-color-2: #1a1a1a;
-  
-      /* color shadow */
-  
-      --tx-shadow: #fff;  
-    
-      /* font-feature-settings */
-  
-     --s-font-feature-settings:  400;
-     --l-font-feature-settings:  700;
-    }
-  
+    /* color shadow */
+    --tx-shadow: #fff;
+
+    /* font-feature-settings */
+    --s-font-feature-settings: 400;
+    --l-font-feature-settings: 700;
   }
+}
+
+  
