@@ -433,6 +433,7 @@
   font-weight: 400;
   line-height: var(--s-lie-height, 14px);
   color: var(--global-color, #00cc14);
+  mix-blend-mode: difference;
 
 }
 
