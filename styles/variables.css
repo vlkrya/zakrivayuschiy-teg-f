@@ -2,7 +2,7 @@
 
 :root {
 
-
+  --cursor-pointer: pointer;
   --primary-text-color: white;
   --accent-color: #000000;
   /* like color */
