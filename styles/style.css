@@ -125,6 +125,54 @@
   .button:hover {
     cursor: var(--cursour-pointer), pointer;
   }
+
+  .theme-menu__button:hover {
+    opacity: 0.6;
+  }
+
+  .like-icon:hover .core,
+  .like-icon:hover .main-body {
+    fill: var(--fill-border, #00cc14); 
+    transition: fill 0.3s linear;
+  }
+
+  .card__icon-button:hover {
+    transform: scale(1.05); 
+  }
+
+  .heart:hover {
+    cursor: var(--cursour-pointer), pointer;
+
+    & .main-body {
+      fill: var(--fill-border, #00cc14);
+      transition: fill 0.3s linear 0.05s;
+    }
+
+    & .core {
+      fill: var(--fill-border, #00cc14);
+      transition: fill 0.3s linear;
+    }
+  }
+
+  .button .button__text::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg-accent, #00cc14);
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+    mix-blend-mode: difference;
+  }
+
+  /* .button__text::before {
+    mix-blend-mode: difference;
+
+  } */
+
+  .button:hover .button__text::before {
+    transform: scaleX(1);
+  }
 }
 
 .theme-menu__button {
@@ -147,12 +195,6 @@
     border-block-end: 1px solid var(--global-bd-color, #00cc14);
     transition: transform 0.3s ease;
     transform: scaleX(1);
-  }
-}
-
-@media (hover: hover) {
-  .theme-menu__button:hover {
-    opacity: 0.6;
   }
 }
 
@@ -327,34 +369,6 @@
   transition: transform 0.3s ease;
 }
 
-@media (hover: hover) {
-  .like-icon:hover .core,
-  .like-icon:hover .main-body {
-    fill: var(--fill-border, #00cc14); 
-    transition: fill 0.3s linear;
-  }
-
-  .card__icon-button:hover {
-    transform: scale(1.05); 
-  }
-}
-
-@media (hover: hover) {
-  .heart:hover {
-    cursor: var(--cursour-pointer), pointer;
-
-    & .main-body {
-      fill: var(--fill-border, #00cc14);
-      transition: fill 0.3s linear 0.05s;
-    }
-
-    & .core {
-      fill: var(--fill-border, #00cc14);
-      transition: fill 0.3s linear;
-    }
-  }
-}
-
 .heart:active {
   & .main-body {
     fill: var(--fill-active, #00cc14);
@@ -520,28 +534,6 @@
   transform: translateX(0);
 }
 
-
-@media (hover: hover) {
-  .button .button__text::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: var(--bg-accent, #00cc14);
-    opacity: 0;
-    transform: scaleX(0);
-    transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
-    mix-blend-mode: difference;
-  }
-
-  /* .button__text::before {
-    mix-blend-mode: difference;
-
-  } */
-
-  .button:hover .button__text::before {
-    transform: scaleX(1);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .button .button__text::before {
