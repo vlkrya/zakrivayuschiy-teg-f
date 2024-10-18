@@ -530,12 +530,13 @@
     opacity: 0;
     transform: scaleX(0);
     transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
+    mix-blend-mode: difference;
   }
 
-  .button__text::before {
+  /* .button__text::before {
     mix-blend-mode: difference;
 
-  }
+  } */
 
   .button:hover .button__text::before {
     transform: scaleX(1);
@@ -699,7 +700,6 @@
     height: auto;
   
   }
-
 }
 
 
