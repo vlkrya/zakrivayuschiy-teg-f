@@ -1,4 +1,4 @@
- /* Здесь вы напишете основную часть стилей страницы.
+/* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
@@ -407,7 +407,7 @@
   font-family: var(--global-font-family), sans-serif;
   font-weight: 400;
   line-height: var(--s-lie-height, 14px);
-  color: var(--global-color, #00cc14);
+  color: var(--primary-text-color);
   mix-blend-mode: difference;
 }
 
@@ -448,11 +448,6 @@
 .icon-floppy {
   max-width: 21px;
   height: auto;
-  color: var(--primary-text-color);
-  mix-blend-mode: difference;
-}
-
-.button__text {
   color: var(--primary-text-color);
   mix-blend-mode: difference;
 }
@@ -538,7 +533,6 @@
     height: auto;
   }
 }
-
 
 
 
