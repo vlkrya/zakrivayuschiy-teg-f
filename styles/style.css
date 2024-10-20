@@ -136,10 +136,6 @@
     transition: fill 0.3s linear;
   }
 
-  .card__icon-button:hover {
-    transform: scale(1.05); 
-  }
-
   .heart:hover {
     cursor: var(--cursour-pointer), pointer;
 
