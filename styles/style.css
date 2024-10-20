@@ -1,4 +1,4 @@
-/* Здесь вы напишете основную часть стилей страницы.
+ /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
@@ -41,7 +41,6 @@
   background-attachment: fixed;
 }
 
-
 @supports (font-variation-settings: normal) {
   .page {
     font-family: var(--feature-font-family), sans-serif;
@@ -81,7 +80,6 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
-
 }
 
 .header__title {
@@ -107,17 +105,43 @@
   appearance: none;
   font-size: var(--s-font-size, 14px);
   line-height: var(--s-line-height, 14px);
-  border: none;
-  background: none;
-  outline: none;
-  transition: box-shadow 0.3s ease;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+  overflow: hidden;
+  font-family: var(--aсcent-font-family);
+  font-weight: 400;
+  text-align: center;
+  animation: 0.5s linear;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 
   &:focus {
     outline: none;
   }
 
   &:focus-visible {
-    box-shadow: 2px 2px var(--global-bd-color, #00cc14);
+    box-shadow: 2px 2px var(--accent-color);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &:hover::before {
+    transform: translateX(0);
+  }
+
+  &:focus-visible {
+    box-shadow: 2px 2px 0 var(--accent-color);
   }
 }
 
@@ -126,28 +150,8 @@
     cursor: var(--cursour-pointer), pointer;
   }
 
-  .theme-menu__button:hover {
-    opacity: 0.6;
-  }
-
-  .like-icon:hover .core,
-  .like-icon:hover .main-body {
-    fill: var(--fill-border, #00cc14); 
-    transition: fill 0.3s linear;
-  }
-
-  .heart:hover {
-    cursor: var(--cursour-pointer), pointer;
-
-    & .main-body {
-      fill: var(--fill-border, #00cc14);
-      transition: fill 0.3s linear 0.05s;
-    }
-
-    & .core {
-      fill: var(--fill-border, #00cc14);
-      transition: fill 0.3s linear;
-    }
+  .button:hover::before {
+    transform: translateX(0);
   }
 
   .button .button__text::before {
@@ -160,11 +164,6 @@
     transition: opacity 0.7s ease-in-out, transform 0.5s ease-in-out;
     mix-blend-mode: difference;
   }
-
-  /* .button__text::before {
-    mix-blend-mode: difference;
-
-  } */
 
   .button:hover .button__text::before {
     transform: scaleX(1);
@@ -227,48 +226,6 @@
   inline-size: 130px;
   min-block-size: 41px;
 }
-
-.button {
-  position: relative;
-  background-color: transparent;
-  border: 2px solid var(--accent-color);
-  cursor: pointer;
-  overflow: hidden;
-  font-family: var(--aсcent-font-family);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 12.6px;
-  text-align: center;
-  animation: 0.5s linear;
-  transition: box-shadow 0.3s ease;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.button::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  transform: translateX(-100%);
-
-  transition: transform 0.5s ease-in-out;
-}
-
-.button:hover::before {
-  transform: translateX(0);
-}
-
 
 .list {
   display: flex;
@@ -438,16 +395,12 @@
   flex-shrink: 0;
 }
 
-
-
 .card__like-button {
   background-color: var(--bg-secondry, #000);
   border: 2px solid var(--global-bd-color, #00cc14);
   transition: background-color 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
 }
-
-
 
 .button__text {
   display: inline-block;
@@ -456,7 +409,6 @@
   line-height: var(--s-lie-height, 14px);
   color: var(--global-color, #00cc14);
   mix-blend-mode: difference;
-
 }
 
 .button__text-ok {
@@ -467,18 +419,14 @@
 }
 
 .button__text-padding {
-
   padding-block: 9px;
-  
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .button .button__text::before {
     transform-origin: left;
   }
 }
-
 
 .footer {
   display: flex;
@@ -495,7 +443,6 @@
   padding-block: 15px;
   border: 2px solid var(--global-bd-color, #00cc14);
   background-color: var(--bg-secondry, #000);
-
 }
 
 .icon-floppy {
@@ -527,8 +474,6 @@
   flex-wrap: nowrap;
   gap: 20px;
   padding-bottom: 18px;
-
-
 }
 
 .floppy__title {
@@ -538,14 +483,12 @@
   font-weight: 400;
   line-height: var(--ssm-line-height, 21px);
   text-transform: uppercase;
-
 }
 
 .button__text--save-mode {
   margin-block-start: 30px;
   padding: 10px clamp(7.03125rem, 6.6348rem + 1.6917vw, 8.15625rem);
   border: 2px solid var(--global-bd-color, #00cc14);
-
 }
 
 @media (max-width: 400px) {
@@ -584,7 +527,6 @@
     right: 11px;
   }
 
-
   .button-save {
     flex-direction: column;
     padding-inline: 19.5px 20.5px;
@@ -594,9 +536,9 @@
   .icon-floppy {
     max-width: 28px;
     height: auto;
-  
   }
 }
+
 
 
 
