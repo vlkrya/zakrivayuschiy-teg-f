@@ -220,7 +220,7 @@
   block-size: 14px;
   inset-inline-start: -14px;
   inset-block-start: 0px;
-  animation: move 0.5s ease-in-out infinite alternate;
+  animation: left-right 0.5s ease-in-out infinite alternate;
 }
 
 .card__like-button {
